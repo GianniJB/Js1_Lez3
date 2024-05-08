@@ -140,7 +140,7 @@ let eyeColor = {
   yellow: [],
   brown: [],
   red: [],
-  blue_gray: [],
+  blueGray: [],
 };
 
 /* ESERCIZIO 5
@@ -148,11 +148,19 @@ let eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-for (let index = 0; index < starWarsCharacters.length; index++)
+for (let i = 0; i < starWarsCharacters.length; i++)
   switch (starWarsCharacters[i].eye_color) {
     case "blue":
-      eyeColor.push(starWarsCharacters[i].name);
+      eyeColor.blue.push(starWarsCharacters[i].name);
       break;
+    case "yellow":
+      eyeColor.yellow.push(starWarsCharacters[i].name);
+    case "red":
+      eyeColor.red.push(starWarsCharacters[i].name);
+    case "brown":
+      eyeColor.brown.push(starWarsCharacters[i].name);
+    case "blue-gray":
+      eyeColor.blueGray.push(starWarsCharacters[i].name);
   }
 
 console.log(eyeColor);
